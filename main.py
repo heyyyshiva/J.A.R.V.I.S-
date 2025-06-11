@@ -18,7 +18,7 @@ engine.setProperty('rate', 150)  # Speed of speech
 import google.generativeai as genai
 
 # Configure Gemini API
-genai.configure(api_key="AIzaSyD5EcOHYb038bywgikfmhc5dQjL4qeyEEk")  # Replace with your Gemini API key
+genai.configure(api_key="")  # Replace with your Gemini API key
 model = genai.GenerativeModel('gemini-pro')
 
 def speak(text):
@@ -100,7 +100,7 @@ def execute_command(query):
         speak("Screenshot saved")
         
     elif 'weather' in query:
-        api_key = "1bf699e583ec49cd85c203056250906"  # Get from https://openweathermap.org
+        api_key = ""  # Get from https://openweathermap.org
         speak("Which city?")
         city = take_command()
         weather_url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
